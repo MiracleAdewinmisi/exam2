@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Information</title>
+    <link rel="stylesheet" href="bootstrap-5.1.3-dist/css/bootstrap.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+</head>
+
+<body style="background-image: url(./signup2.jpg);">
+    <div class="container-fluid border">
+        <div class="row border border">
+            <div class="col-lg-6 col-md-6 col-12 p-2 border border-2">
+                <h1 class="text-center m-5 text-decoration-underline text-light">STUDENT INFORMATION</h1>
+            </div>
+
+            <div class="col-lg-6 col-md-6 col-12 p-2 border border border-2">
+                <button class="btn btn-sm btn-success m-2" onclick="show1()">Miracle Adewinmisi</button>
+                <button class="btn btn-sm btn-success m-2" onclick="show2()">Adebola Ajibola</button>
+                <button class="btn btn-sm btn-success m-2" onclick="show3()">Muyiwa Ademola</button>
+                <button class="btn btn-sm btn-success m-2" onclick="show4()">Mohammed Alli</button>
+                <button class="btn btn-sm btn-success m-2" onclick="show5()">Ayotomiwa Babalola</button>
+                <button class="btn btn-sm btn-success m-2" onclick="show6()">Ayo Ajewole</button>
+                <button class="btn btn-sm btn-success m-2" onclick="show7()">Nora Oluwalonimi</button>
+                <button class="btn btn-sm btn-success m-2" onclick="show8()">Ella Arise</button>
+                <button class="btn btn-sm btn-success m-2" onclick="show9()">Deborah Babalola</button>
+                <button class="btn btn-sm btn-success m-2" onclick="show10()">Jemimiah Adeniji</button>
+
+            </div>
+
+            <div class="container-fluid mx-auto"></div>
+            <div class="row justify-content-center" id="display" ></div> 
+
+            <script>
+                class Student {
+                    constructor
+                        (names,matriculation, department, level, year) {
+                        this.name = names
+                        this.matric = matriculation
+                        this.dept = department
+                        this.level = level
+                        this.admit = year
+                    }
+                    details() { 
+                        display.innerHTML = `
+                        <div class="col-6">
+                <div class="card" style="width: 18rem;">
+                    <div class="card-body" style="background-color: whitesmoke;">
+                    <h2 class="card-title">${this.name}</h2>
+                     <h6 class="card-subtitle mb-2 text-muted"><span class="text-danger">SQI${this.matric}</h6>
+                     <p h2 class="card-text"><span class="text-danger">Department:</span>${this.dept}</p>
+                      <p class="card-text"><span class="text-danger">Level:${this.level}</p>
+                     <p class="card-text"><span class="text-danger">Admission year:${this.admit}</p>
+                        
+  </div>
+</div>
+
+                `
+                    }
+
+                }
+
+                let studentOne = new Student(  "Miracle Adewinmisi", 1231, "Web Development", "200level",2020 );
+                   let studentTwo = new Student( "Adebola Ajibola", 1212, "Web Development", "100level",2020 );
+                   let studentThree = new Student( "Muyiwa Ademola", 1213, "Robotics", "300level",2020 );
+                   let studentFour = new Student( "Mohammed Alli", 1214, "UI/UX", "400level",2020 );
+                   let studentFive = new Student( "Ayotomiwa Babalola", 1215, "Graphics design", "500level",2020 );
+                   let studentSix = new Student( "Ayo Ajewole", 1216, "Hardware Engineering", "600level",2020 );
+                   let studentSeven = new Student( "Nora Oluwalonimi", 1217, "Web Design", "100level",2020 );
+                   let studentEight = new Student( "Ella Arise", 1218, "Cyber Security", "200level",2020 );
+                   let studentNine = new Student( "Deborah Babalola", 1219, "UI/UX", "400level",2020 );
+                   let studentTen = new Student( "Jemimiah Adeniji", 1220, "Graphics design", "300level",2020 );
+
+
+                
+                console.log(studentOne);
+                const show1 = () => {
+                    studentOne.details();
+                };
+                const show2 = () => {
+                    studentTwo.details();
+                };
+                const show3 = () => {
+                    studentThree.details();
+                };
+                const show4 = () => {
+                    studentFour.details();
+                };
+                const show5 = () => {
+                    studentFive.details();
+                };
+                const show6 = () => {
+                    studentSix.details();
+                };
+                const show7 = () => {
+                    studentSeven.details();
+                };
+                const show8 = () => {
+                    studentEight.details();
+                };
+                const show9 = () => {
+                    studentNine.details();
+                };
+                const show10 = () => {
+                    student.details();
+                };
+                
+
+            </script>
+
+
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+                integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+                crossorigin="anonymous"></script>
+</body>
+
+</html>
